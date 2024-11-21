@@ -1,8 +1,11 @@
-const orderModel = require('../models/orderModel');
+const orderModel = require("../models/orderModel");
 const productModel = require("../models/productModel");
 const ErrorHandler = require("../utils/errorhandler");
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 
+
+
+//create new order
 const createOrder = catchAsyncErrors(async (req, res, next) => {
   const { shippingInfo, orderItems, paymentInfo, itemsPrice, taxPrice, shippingPrice, totalPrice } = req.body;
 
